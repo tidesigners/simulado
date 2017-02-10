@@ -24,6 +24,9 @@ public class Questao implements Serializable {
     @OneToMany
     private List<Resposta> resposta;
 
+    @OneToOne
+    private Resposta respostaCerta;
+
     public Long getId() {
         return id;
     }
@@ -54,5 +57,13 @@ public class Questao implements Serializable {
 
     public void setResposta(List<Resposta> resposta) {
         this.resposta = resposta;
+    }
+
+    public Resposta getRespostaCerta() {
+        return respostaCerta;
+    }
+
+    public void setRespostaCerta(Resposta respostaCerta) {
+        this.respostaCerta = respostaCerta;
     }
 }

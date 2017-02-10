@@ -19,6 +19,9 @@ public class Materia implements Serializable {
 
     private String descricao;
 
+    @ManyToMany
+    private List<Curso> cursos;
+
     @OneToMany
     private List<Questao> questoes;
 
@@ -36,6 +39,14 @@ public class Materia implements Serializable {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
     }
 
     public List<Questao> getQuestoes() {
