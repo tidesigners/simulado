@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="
+        http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+    <navigation-rule>
+
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>home</from-outcome>
+            <to-view-id>/segura/home.xhtml</to-view-id>
+        </navigation-case>
+
+        <!--Usuário-->
+        <navigation-case>
+            <from-outcome>usuario</from-outcome>
+            <to-view-id>/segura/usuario/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>usuario_edit</from-outcome>
+            <to-view-id>/segura/usuario/edit.xhtml</to-view-id>
+        </navigation-case>
+
+
+    </navigation-rule>
+
+    <converter>
+        <converter-for-class>java.lang.Enum</converter-for-class>
+        <converter-class>javax.faces.convert.EnumConverter</converter-class>
+    </converter>
+    <application>
+        <resource-bundle>
+            <base-name>br.gov.rio.cor.messages.messages</base-name>
+            <var>msgs</var>
+        </resource-bundle>
+        <locale-config>
+            <default-locale>pt_BR</default-locale>
+        </locale-config>
+        <message-bundle>
+            br.gov.rio.cor.messages.messages
+        </message-bundle>
+    </application>
+</faces-config>

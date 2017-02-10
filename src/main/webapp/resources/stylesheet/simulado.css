@@ -1,0 +1,257 @@
+.botao_adicionar_cabecalho_tabela {
+    position: absolute;
+    top: 28px;
+    right: 19px;
+}
+
+.botao_adicionar_cabecalho_index {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+}
+
+.no_padding_left_right {
+	padding-left: 0px;
+	
+}
+.grupo_filtro {
+	white-space: nowrap; 
+	display: inline
+}
+.inplace_filtro{
+	padding-left:5px;
+	color: red;
+	margin-right:10px;
+}
+.radio_select {
+	border: none;
+	padding-left:10px;
+}
+
+.radio_select label {
+	margin-left: 5px;
+	margin-right: 8px; 
+}
+.column-list-view-acao{
+	text-align: center;	
+	width: 150px;
+}
+
+.btn-list-view {
+	font-size: 1em;
+	padding: 5px 10px;
+}
+
+.mensagem_erro {
+	color: white;
+	font-weight: 600;
+	background-color: #DD4B39;
+	border: 1px solid #CD0A0A;
+	font-size: 0.91em;
+	margin-top: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	line-height: 1.1;
+	width: 100%;
+}
+
+.icone_de_atencao {
+	color: #ff0000;
+}
+
+.botao_acao {
+	width: 2em;
+}
+
+.cor_fonte_padrao {
+	color: #555;
+}
+
+.desabilitado {
+	background-color: grey;
+	border-color: black;
+}
+
+.botao_suspenso {
+	margin-bottom: 10px;
+}
+
+.botao_suspenso form{
+	float: right;
+}
+
+.row_atividade_atrasada td {
+	background-color:#f56954 !important;
+}
+
+.row_atividade_concluida td {
+	background-color:#46ea9f !important; 
+/*	background-color:#00a65a !important; mais escuro */
+    opacity: 0.65;
+}
+
+.row_atividade_andamento td {
+	background-color:#39cccc !important;
+    opacity: 0.65;
+}
+
+.row_atividade_aguardando td {
+	background-color:#E0E0E0 !important;
+    opacity: 0.65;
+}
+
+.row_demanda_informacao td {
+	background-color:#3c8dbc !important;
+    opacity: 0.65;
+}
+
+.row_demanda_aberta td {
+	background-color:#f39c12 !important;
+}
+
+.row_demanda_concluida td {
+	background-color:#008d4c !important;
+    opacity: 0.65;
+}
+
+/*
+ * Component: Info Box 2
+ * -------------------
+ */
+ .info-box-margin {
+ 	margin-right: 10px;
+ }
+.info-box-small {
+  display: block;
+  min-height: 90px;
+  background: #fff;
+  width: 90px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.info-box-small small {
+  font-size: 14px;
+}
+.progress-small {
+	top: 84px;
+	position: absolute;
+	left:25px;
+	padding: 0px;
+	width: 90px;
+}
+.info-box-small .progress-small {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 5px -10px 5px -10px;
+  height: 2px;
+}
+.info-box-small .progress-small,
+.info-box-small .progress-small .progress-small-bar {
+  border-radius: 0;
+}
+.info-box-small .progress-small .progress-small-bar {
+  background: #fff;
+}
+.info-box-small-icon {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  display: block;
+  float: left;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 90px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.info-box-small-content {
+  padding: 0px 10px;
+  margin-left: 0px;
+  height: 110px;
+}
+.info-box-small-number {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  bottom: 35px;
+}
+
+.info-box-small-text {
+  top: 0px; 
+  margin:0px; 
+  padding:0px; 
+}
+.progress-small-description{
+  bottom: 10px;
+}
+.progress-small-description,
+.info-box-small-text {
+  position:absolute;
+  display: block;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.info-box-small-text {
+  text-transform: uppercase;
+}
+.info-box-small-more {
+  display: block;
+}
+.progress-small-description {
+  margin: 0;
+}
+
+/* fim de infobox 2*/
+
+/* progress-small infobox 2*/
+
+/*
+ * Component: progress-small Bar
+ * -----------------------
+ */
+.progress-small,
+.progress-small > .progress-small-bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.progress-small,
+.progress-small > .progress-small-bar,
+.progress-small .progress-small-bar,
+.progress-small > .progress-small-bar .progress-small-bar {
+  border-radius: 1px;
+}
+.progress-small-bar {
+	height: 100%;
+}
+
+/* Vertical bars */
+.progress-small.vertical {
+  position: relative;
+  width: 30px;
+  height: 200px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.progress-small.vertical > .progress-small-bar {
+  width: 100%!important;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Remove margins from progress-small bars when put in a table */
+.table tr > td .progress-small {
+  margin: 0;
+}
+
+/*fim de progress-small bar info*/
+
+.titulo-dashboard{
+    float:right;
+    font-size: 0.8em;
+    color:rgba(0,0,0,0.6);
+}

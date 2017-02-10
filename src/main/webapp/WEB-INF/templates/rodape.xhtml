@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<f:loadBundle basename="br.com.tiupgrade.simulado.messages.messages" var="msg" />
+	<!-- Content footer -->
+	<footer class="main-footer">
+		<div class="pull-right hidden-xs">
+			<b>Versão</b> <h:outputText style="margin:5px;" value="#{msg.versao}" />
+		</div>
+		<div style="text-align: center;">
+		<strong>Copyright © 2016 <h:outputText style="margin:5px;" value="#{msg.empresa}."/>
+		</strong> All rights reserved.
+		</div>
+	</footer>
+
+</ui:composition>

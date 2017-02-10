@@ -1,0 +1,72 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/templates/simulado.xhtml">
+
+    <ui:param name="header1" value="Cadastro de Usuários"/>
+    <ui:param name="header2" value="Lista"/>
+    <ui:param name="localizacao" value="home > Cadastro de Usuários"/>
+
+    <ui:define name="content">
+        <f:event listener="#{manterUsuarioControlador.beginConversation()}" type="preRenderView"/>
+        <!-- Full Width Column -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-body table-responsive no-padding">
+                            <h:form id="usuario_lista">
+                                <p:dataTable var="_usuario"
+                                             value="#{manterUsuarioControlador.getUsuarios()}"
+                                             tableStyleClass="table table-bordered table-striped"
+                                             paginatorPosition="bottom" paginator="true" rows="15">
+                                    <p:column headerText="Nome " filterBy="#{_usuario.nome}" filterStyle="display: inline-block; height: 20px" filterMatchMode="contains" style="text-align: center">
+                                        <h:outputText value="#{_usuario.nome}"/>
+                                    </p:column>
+                                    <p:column headerText="Username " filterBy="#{_usuario.username}" filterStyle="display: inline-block; height: 20px" filterMatchMode="contains" style="text-align: center">
+                                        <h:outputText value="#{_usuario.username}"/>
+                                    </p:column>
+                                    <p:column headerText="Perfil " filterBy="#{_usuario.perfil}" filterStyle="display: inline-block; height: 20px" filterMatchMode="contains" style="text-align: center">
+                                        <h:outputText value="#{_usuario.perfil}"/>
+                                    </p:column>
+                                    <p:column headerText="Status " style="width: 115px; text-align: center">
+                                        <p:commandButton id="ativa" value="#{_usuario.ativo ? 'DESATIVAR' : 'ATIVAR' }" action="#{manterUsuarioControlador.mudaStatus(_usuario)}" ajax="change" style="width: 110px"/>
+                                    </p:column>
+                                    <p:column headerText="Ações" styleClass="column-list-view-acao">
+                                        <h:commandLink action="#{manterUsuarioControlador.editar(_usuario)}"
+                                                       title="Editar usuario">
+                                            <span class="btn btn-primary btn-success btn-list-view"><i
+                                                    class="ion-edit"/></span>
+                                        </h:commandLink>
+                                        <p:commandLink onclick="if (!confirm('Tem certeza que deseja excluir esse registro?'))return false"
+                                                       title="Excluir usuario"
+                                                action="#{manterUsuarioControlador.excluir(_usuario)}"
+                                                ajax="false">
+                                            <span class="btn btn-primary btn-danger btn-list-view"><i
+                                                    class="ion-trash-a"/></span>
+                                        </p:commandLink>
+                                    </p:column>
+                                </p:dataTable>
+                                <p:commandLink action="#{manterUsuarioControlador.novo()}"
+                                               title="Novo usuario"
+                                               styleClass="botao_adicionar_cabecalho_index">
+                                                    <span class="btn btn-primary btn-xs"><i
+                                                            class="fa fa-plus-circle"/>  </span>
+                                </p:commandLink>
+                            </h:form>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#segura#index.xhtml" NAME="output"
+    PATH="/segura/index.xhtml" TARGET="rules:#segura#index.xhtml"
+    TITLE="home" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml" NAME="output1"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="regiao::#segura#regiao#index.xhtml"
+    NAME="output2" PATH="/segura/regiao/index.xhtml"
+    TARGET="rules:#segura#regiao#index.xhtml" TITLE="regiao" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="regiao_edit::#segura#regiao#edit.xhtml"
+    NAME="output3" PATH="/segura/regiao/edit.xhtml"
+    TARGET="rules:#segura#regiao#edit.xhtml" TITLE="regiao_edit" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="modal::#segura#modal#index.xhtml"
+    NAME="output4" PATH="/segura/modal/index.xhtml"
+    TARGET="rules:#segura#modal#index.xhtml" TITLE="modal" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="modal_edit::#segura#modal#edit.xhtml"
+    NAME="output5" PATH="/segura/modal/edit.xhtml"
+    TARGET="rules:#segura#modal#edit.xhtml" TITLE="modal_edit" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="contingencia::#segura#contingencia#index.xhtml" NAME="output6"
+    PATH="/segura/contingencia/index.xhtml"
+    TARGET="rules:#segura#contingencia#index.xhtml"
+    TITLE="contingencia" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="contingencia_edit::#segura#contingencia#edit.xhtml"
+    NAME="output7" PATH="/segura/contingencia/edit.xhtml"
+    TARGET="rules:#segura#contingencia#edit.xhtml"
+    TITLE="contingencia_edit" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="instalacao::#segura#instalacao#index.xhtml"
+    NAME="output8" PATH="/segura/instalacao/index.xhtml"
+    TARGET="rules:#segura#instalacao#index.xhtml" TITLE="instalacao" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="instalacao_edit::#segura#instalacao#edit.xhtml" NAME="output9"
+    PATH="/segura/instalacao/edit.xhtml"
+    TARGET="rules:#segura#instalacao#edit.xhtml"
+    TITLE="instalacao_edit" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="importacao::#segura#importacao#index.xhtml"
+    NAME="output10" PATH="/segura/importacao/index.xhtml"
+    TARGET="rules:#segura#importacao#index.xhtml" TITLE="importacao" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="consulta::#segura#consulta#index.xhtml"
+    NAME="output11" PATH="/segura/consulta/index.xhtml"
+    TARGET="rules:#segura#consulta#index.xhtml" TITLE="consulta" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#segura#index.xhtml"
+  PATH="/segura/index.xhtml" SHAPE="288,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#regiao#index.xhtml"
+  PATH="/segura/regiao/index.xhtml" SHAPE="288,353,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="288,241,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#regiao#edit.xhtml"
+  PATH="/segura/regiao/edit.xhtml" SHAPE="288,465,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#modal#index.xhtml"
+  PATH="/segura/modal/index.xhtml" SHAPE="304,305,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#modal#edit.xhtml"
+  PATH="/segura/modal/edit.xhtml" SHAPE="304,753,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#contingencia#index.xhtml"
+  PATH="/segura/contingencia/index.xhtml" SHAPE="304,369,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#contingencia#edit.xhtml"
+  PATH="/segura/contingencia/edit.xhtml" SHAPE="304,817,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#instalacao#index.xhtml"
+  PATH="/segura/instalacao/index.xhtml" SHAPE="304,433,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#instalacao#edit.xhtml"
+  PATH="/segura/instalacao/edit.xhtml" SHAPE="304,881,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#importacao#index.xhtml"
+  PATH="/segura/importacao/index.xhtml" SHAPE="304,465,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#segura#consulta#index.xhtml"
+  PATH="/segura/consulta/index.xhtml" SHAPE="304,497,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

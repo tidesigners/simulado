@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+>
+
+<h:head>
+    <title>Simulado</title>
+    <!--    	<meta http-equiv="Content-Type" content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' /> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet name="bootstrap/css/bootstrap.css"/>
+    <h:outputStylesheet name="font-awesome-4.3.0/css/font-awesome.css"/>
+    <h:outputStylesheet name="ionicons-2.0.1/css/ionicons.css"/>
+    <h:outputStylesheet name="tema/css/AdminLTE.css"/>
+    <h:outputStylesheet name="stylesheet/primehack.css"/>
+    <h:outputStylesheet name="stylesheet/simulado.css"/>
+    <h:outputStylesheet name="plugins/iCheck/square/blue.css"/>
+
+    <!-- jQuery 2.1.4 -->
+    <h:outputScript name="plugins/jQuery/jQuery-2.1.4.min.js"/>
+    <!-- Bootstrap 3.3.2 JS -->
+    <h:outputScript name="bootstrap/js/bootstrap.min.js"/>
+    <!-- iCheck -->
+    <h:outputScript name="plugins/iCheck/icheck.min.js"/>
+
+</h:head>
+<h:body styleClass="login-page">
+    <h:outputStylesheet name="bootstrap/css/bootstrap.css"/>
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="../../index2.html"><b></b></a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">
+                <span style="font-size: 2em">Simulado</span> <br/>Autenticação
+            </p>
+            <h:form id="logForm">
+                <h:messages styleClass="mensagem_erro"/>
+                <div class="form-group has-feedback">
+                    <h:inputText value="#{autenticador.login}" styleClass="form-control" id="login"/><br/> <span
+                        class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <h:inputSecret value="#{autenticador.senha}" styleClass="form-control"/> <span
+                        class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <!--
+                        <div class="checkbox icheck">
+                            <label> <input type="checkbox" /> Manter conectado
+                            </label>
+                        </div>
+                        -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <h:commandButton action="#{autenticador.doLogin()}" type="submit"
+                                         styleClass="btn btn-primary btn-block btn-flat" value="Entrar"/>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </h:form>
+        </div>
+        <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+    <script type="text/javascript">
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
+            });
+        });
+    </script>
+
+
+</h:body>
+</html>

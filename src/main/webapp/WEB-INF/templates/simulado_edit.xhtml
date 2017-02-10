@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:p="http://primefaces.org/ui">
+<h:head>
+   <title>Simulado</title>
+   <link rel="shortcut icon" href="#{request.contextPath}/resources/img/calendar-icon.png" />
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
+	
+   	<h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+   	<h:outputStylesheet name="font-awesome-4.3.0/css/font-awesome.css" />
+   	<h:outputStylesheet name="ionicons-2.0.1/css/ionicons.css" />
+   	<h:outputStylesheet name="tema/css/AdminLTE.css" />
+   	<h:outputStylesheet name="tema/css/skins/_all-skins.css" />
+   	<h:outputStylesheet name="stylesheet/primehack.css" />
+	<h:outputStylesheet name="stylesheet/simulado.css" />
+
+	<!-- jQuery 2.1.4 -->
+<!-- conflitando com o primefaces 
+<h:outputScript name="plugins/jQuery/jQuery-2.1.4.min.js"/>  -->	
+    <!-- Bootstrap 3.3.2 JS -->	
+	<h:outputScript name="bootstrap/js/bootstrap.min.js"/>
+	<!-- SlimScroll -->
+	<h:outputScript name="plugins/slimScroll/jquery.slimscroll.min.js"/>
+	<!-- FastClick -->
+	<h:outputScript name="plugins/fastclick/fastclick.min.js"/>
+	<!-- AdminLTE App -->
+	<h:outputScript name="tema/js/app.min.js"/>
+	<!-- AdminLTE for demo purposes -->
+<!-- <h:outputScript name="tema/js/demo.js"/>  -->
+
+</h:head>
+<h:body styleClass="skin-blue layout-top-nav">
+	<div class="wrapper">  
+    	<ui:include src="menu.xhtml" />
+    	<div class="content-wrapper">
+        	<div class="container">
+        		<ui:include src="nav.xhtml" />
+		    	<ui:insert name="content">
+			                    [Template content will be inserted here]
+			   	</ui:insert>
+			</div>
+		</div>
+	</div><!-- ./wrapper -->
+	<ui:include src="rodape.xhtml" />
+</h:body>
+</html>

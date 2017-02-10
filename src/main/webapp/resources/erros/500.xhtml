@@ -1,0 +1,19 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/simulado.xhtml">
+    <ui:param name="header1" value="Erro!"/>
+    <ui:define name="content">
+        <!-- Full Width Column -->
+        <!-- Main content -->
+        <section class="content">
+            <div style="text-align: center">
+                <img src="/simulado/resources/img/error.png" style="width: 100px" alt=""/>
+          <h1><h:outputText value="Desculpe, ocorreu um erro ao executar a tarefa solicitada."/></h1>
+            </div>
+        </section>
+        <!-- /.content -->
+    </ui:define>
+</ui:composition>
