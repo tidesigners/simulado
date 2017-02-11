@@ -11,7 +11,7 @@ import javax.ejb.Startup;
 @Singleton
 public class ScheduleFactory {
 
-    @PostConstruct
+   /* @PostConstruct
     public void start() {
         try {
             SchedulerFactory sf = new StdSchedulerFactory();
@@ -37,5 +37,5 @@ public class ScheduleFactory {
         } catch (SchedulerException e) {
             System.out.println(e.getMessage());
         }
-    }
+    }*/
 }
