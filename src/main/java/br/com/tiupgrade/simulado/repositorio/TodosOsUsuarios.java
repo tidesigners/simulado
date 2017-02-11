@@ -17,10 +17,10 @@ import java.util.logging.Logger;
 public class TodosOsUsuarios {
 
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Resource
-    UserTransaction transaction;
+    private UserTransaction transaction;
 
     public Usuario obterPorId(Integer id) {
         return (Usuario) entityManager.createQuery("select u from Usuario u where u.id = :id ")
