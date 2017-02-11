@@ -31,13 +31,23 @@ public class TodosOsCursos {
     @SuppressWarnings("unchecked")
     public Curso obterPorId(Long id){
 
-        return (Curso) em.createQuery("select c from Curso c where id = :id").setParameter("id", id).getResultList();
+        return (Curso) em.createQuery("select c from Curso c where id = :id").setParameter("id", id)
+                .getResultList();
+
+    }
+
+    @SuppressWarnings("unchecked")
+    public Curso obterPorDescricao(String descricao){
+
+        return (Curso) em.createQuery("select c from Curso c where descricao = :descricao").setParameter("descricao", descricao)
+                .getResultList();
 
     }
 
     @SuppressWarnings("unchecked")
     public List<Curso> obterTodos(){
-        return (List<Curso>) em.createQuery("select c from Curso c").getResultList();
+        return (List<Curso>) em.createQuery("select c from Curso c")
+                .getResultList();
     }
 
     public boolean colocar(Curso curso) {

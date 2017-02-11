@@ -27,6 +27,7 @@ public class TodosOsUsuarios {
                 .setParameter("id", id).getSingleResult();
     }
 
+    @SuppressWarnings("unchecked")
     public Usuario obterPorLogin(String username) {
         try {
             return (Usuario) entityManager.createQuery("select u from Usuario u where u.username = :username").setParameter("username", username).getSingleResult();
