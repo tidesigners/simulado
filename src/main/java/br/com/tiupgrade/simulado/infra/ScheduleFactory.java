@@ -28,7 +28,7 @@ public class ScheduleFactory {
                     .newTrigger()
                     .withIdentity(tk1)
                     .startNow()
-                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(60))
+                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(0))
                     .build();
 
             sched.start(); // start before scheduling jobs

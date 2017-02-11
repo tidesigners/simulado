@@ -22,7 +22,7 @@ public class Schedule implements Serializable, Job {
 		}*/
 
         try {
-            UrlReader.getHTML("http://localhost:8080/palantir/api/consulta/atualizar");
+            UrlReader.getHTML("");
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
