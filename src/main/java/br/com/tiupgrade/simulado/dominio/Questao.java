@@ -22,7 +22,7 @@ public class Questao implements Serializable {
     private String texto;
 
     @OneToMany
-    private List<Resposta> resposta;
+    private List<Resposta> respostas;
 
     @OneToOne
     private Resposta respostaCerta;
@@ -51,12 +51,12 @@ public class Questao implements Serializable {
         this.texto = texto;
     }
 
-    public List<Resposta> getResposta() {
-        return resposta;
+    public List<Resposta> getRespostas() {
+        return respostas;
     }
 
-    public void setResposta(List<Resposta> resposta) {
-        this.resposta = resposta;
+    public void setRespostas(List<Resposta> respostas) {
+        this.respostas = respostas;
     }
 
     public Resposta getRespostaCerta() {
