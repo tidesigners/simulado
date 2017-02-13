@@ -11,7 +11,7 @@ import javax.ejb.Startup;
 @Singleton
 public class ScheduleFactory {
 
-    @PostConstruct
+   /* @PostConstruct
     public void start() {
         try {
             SchedulerFactory sf = new StdSchedulerFactory();
@@ -28,7 +28,7 @@ public class ScheduleFactory {
                     .newTrigger()
                     .withIdentity(tk1)
                     .startNow()
-                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(60))
+                    .withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(0))
                     .build();
 
             sched.start(); // start before scheduling jobs
@@ -37,5 +37,5 @@ public class ScheduleFactory {
         } catch (SchedulerException e) {
             System.out.println(e.getMessage());
         }
-    }
+    }*/
 }

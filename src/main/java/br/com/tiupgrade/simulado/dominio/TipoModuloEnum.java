@@ -5,7 +5,7 @@ public enum TipoModuloEnum {
     * Permissao A G O
     * A = Administrador
     * G = Gestor
-    * O = Observador
+    * U = USUARIO
     *
     * 0 = não pode visualizar
     * 1 = somente visualizar
@@ -15,7 +15,7 @@ public enum TipoModuloEnum {
     * IMPORTAR("importar","210")
     *    Administrador = 2 (pode ver e editar este módulo),
     *    Gestor = 1 (somente visualizar) e
-    *    Observador = 0 (Não tem acesso)
+    *    USUARIO = 0 (Não tem acesso)
     * */
     CONTINGENCIA("contingência", "220"),
     DOCUMENTO("documento", "220"),

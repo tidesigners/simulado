@@ -3,7 +3,7 @@ package br.com.tiupgrade.simulado.dominio;
 public enum TipoPerfilEnum {
 
     ADMINISTRADOR("Administrador"),
-    OBSERVADOR("Observador"),
+    USUARIO("Usuario"),
     GESTOR("Gestor");
 
     private final String perfil;

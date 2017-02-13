@@ -109,7 +109,7 @@ public class Autenticador implements Serializable {
                 return m.getPermissao().substring(0, 1).equals("2");
             case GESTOR:
                 return m.getPermissao().substring(1, 2).equals("2");
-            case OBSERVADOR:
+            case USUARIO:
                 return m.getPermissao().substring(2, 3).equals("2");
         }
 
@@ -129,7 +129,7 @@ public class Autenticador implements Serializable {
                 return !m.getPermissao().substring(0, 1).equals("0");
             case GESTOR:
                 return !m.getPermissao().substring(1, 2).equals("0");
-            case OBSERVADOR:
+            case USUARIO:
                 return !m.getPermissao().substring(2, 3).equals("0");
         }
 

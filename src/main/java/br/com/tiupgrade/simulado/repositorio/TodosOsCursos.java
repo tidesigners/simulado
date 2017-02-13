@@ -1,6 +1,6 @@
 package br.com.tiupgrade.simulado.repositorio;
 
-import br.com.tiupgrade.simulado.dominio.Usuario;
+import br.com.tiupgrade.simulado.dominio.Curso;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.RequestScoped;
@@ -12,45 +12,54 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@Named("todosOsUsuarios")
+/**
+ * Created by rodrigosantos on 10/02/17.
+ */
+
+@Named("todosOsCursos")
 @RequestScoped
-public class TodosOsUsuarios {
+public class TodosOsCursos {
 
     @PersistenceContext
-    private EntityManager entityManager;
+    private EntityManager em;
+
 
     @Resource
     private UserTransaction transaction;
 
-    public Usuario obterPorId(Integer id) {
-        return (Usuario) entityManager.createQuery("select u from Usuario u where u.id = :id ")
-                .setParameter("id", id).getSingleResult();
+
+    @SuppressWarnings("unchecked")
+    public Curso obterPorId(Long id){
+
+        return (Curso) em.createQuery("select c from Curso c where id = :id").setParameter("id", id)
+                .getResultList();
+
     }
 
     @SuppressWarnings("unchecked")
-    public Usuario obterPorLogin(String username) {
-        try {
-            return (Usuario) entityManager.createQuery("select u from Usuario u where u.username = :username").setParameter("username", username).getSingleResult();
-        } catch (Exception e) {
-            return null;
-        }//try
+    public Curso obterPorDescricao(String descricao){
+
+        return (Curso) em.createQuery("select c from Curso c where descricao = :descricao").setParameter("descricao", descricao)
+                .getResultList();
+
     }
 
     @SuppressWarnings("unchecked")
-    public List<Usuario> obterTodos() {
-        return (List<Usuario>) entityManager.createQuery("select u from Usuario u ").getResultList();
+    public List<Curso> obterTodos(){
+        return (List<Curso>) em.createQuery("select c from Curso c")
+                .getResultList();
     }
 
-    public boolean colocar(Usuario usuario) {
+    public boolean colocar(Curso curso) {
         try {
 
             transaction.begin();
-            entityManager.joinTransaction();
-            if (usuario.getId() != null) {
-                usuario = entityManager.merge(usuario);
+            em.joinTransaction();
+            if (curso.getId() != null) {
+                curso = em.merge(curso);
             }//if
-            entityManager.persist(usuario);
-            entityManager.flush();
+            em.persist(curso);
+            em.flush();
             transaction.commit();
         } catch (Exception e) {
             try {
@@ -64,15 +73,15 @@ public class TodosOsUsuarios {
         return true;
     }
 
-    public void remover(Usuario usuario) {
+    public void remover(Curso curso) {
         try {
             transaction.begin();
-            entityManager.joinTransaction();
-            if (usuario.getId() != null) {
-                usuario = entityManager.merge(usuario);
+            em.joinTransaction();
+            if (curso.getId() != null) {
+                curso = em.merge(curso);
             }//if
-            entityManager.remove(usuario);
-            entityManager.flush();
+            em.remove(curso);
+            em.flush();
             transaction.commit();
         } catch (Exception e) {
             try {
@@ -82,5 +91,6 @@ public class TodosOsUsuarios {
             }//try
         }//try
     }
+
 
 }
