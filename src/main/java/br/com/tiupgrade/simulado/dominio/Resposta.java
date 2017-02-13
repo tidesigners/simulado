@@ -16,7 +16,7 @@ public class Resposta implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String testo;
+    private String texto;
 
     @OneToOne
     private Questao questao;
@@ -29,12 +29,12 @@ public class Resposta implements Serializable{
         this.id = id;
     }
 
-    public String getTesto() {
-        return testo;
+    public String getTexto() {
+        return texto;
     }
 
-    public void setTesto(String testo) {
-        this.testo = testo;
+    public void setTexto(String texto) {
+        this.texto = texto;
     }
 
     public Questao getQuestao() {
