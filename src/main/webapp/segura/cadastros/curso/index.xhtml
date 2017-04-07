@@ -1,0 +1,43 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/templates/simulado.xhtml">
+
+    <ui:param name="header1" value="Cadastro de Cursos"/>
+    <ui:param name="header2" value="Lista"/>
+    <ui:param name="localizacao" value="home > Cadastro de cursos"/>
+    <ui:define name="content">
+
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-body table-responsive no-padding">
+                            <h:form id="curso_lista">
+                                <p:dataTable var="_curso"
+                                             value="#{manterCursoControlador.cursos}"
+                                             tableStyleClass="table table-bordered table-striped"
+                                             paginatorPosition="bottom" paginator="true" rows="15">
+
+                                </p:dataTable>
+                                <p:commandLink action="#{manterCursoControlador.novo()}"
+                                               title="Novo curso"
+                                               styleClass="botao_adicionar_cabecalho_index">
+                                                    <span class="btn btn-primary btn-xs"><i
+                                                            class="fa fa-plus-circle"/>  </span>
+                                </p:commandLink>
+                            </h:form>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+        </section>
+
+    </ui:define>
+</ui:composition>

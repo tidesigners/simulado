@@ -15,6 +15,16 @@
             <to-view-id>/segura/home.xhtml</to-view-id>
         </navigation-case>
 
+        <!--Curso-->
+        <navigation-case>
+            <from-outcome>curso</from-outcome>
+            <to-view-id>/segura/cadastros/curso/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>curso_edit</from-outcome>
+            <to-view-id>/segura/cadastros/curso/edit.xhtml</to-view-id>
+        </navigation-case>
+
         <!--Usuário-->
         <navigation-case>
             <from-outcome>usuario</from-outcome>

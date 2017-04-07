@@ -1,0 +1,41 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="/WEB-INF/templates/simulado.xhtml">
+
+    <ui:param name="header1" value="Curso"/>
+    <ui:param name="header2" value="Edição"/>
+    <ui:param name="link" value="Curso"/>
+    <ui:param name="localizacao"
+              value="Cursos"/>
+    <ui:define name="content">
+        <!-- Full Width Column -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <!-- form start -->
+                        <h:messages styleClass="mensagem_erro"/>
+                        <h:form role="form" id="form_curso">
+                            <div class="box-body">
+                                <div class="col-md-8 form-group">
+                                    <h:outputLabel value="Descrição" for="descricao"/>
+                                    <h:inputText styleClass="form-control"
+                                                 id="descricao"
+                                                 required="true"
+                                                 requiredMessage="O campo descrição é necessário!"
+                                                 value="#{manterCursoControlador.curso.descricao}"/>
+                                </div>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </ui:define>
+</ui:composition>
